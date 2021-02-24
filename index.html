@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
+		<meta name="keywords" content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
+		<meta name="author" content="Karim Maaloul for Codrops" />
+
+    <title>1 (begin Three.js</title>
+    <!-- //inline css
+    //normalize the margin to 0
+    // and display our canvas on the entire page -->
+
+	<link rel="stylesheet" type="text/css" href="css/game.css" /> 
+	<link rel="stylesheet" type="text/css" href="css/game.css" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script src="js/game.js"></script>
+</head>
+<body>
+    
+    <div class="game-holder" id="gameHolder">
+
+        <div class="header">
+            
+            <h1>Let's fly</h1>
+            <h2 style="color:#d1b790">Created by Ian Mullane</h2>
+            <br>
+            <h2>Avoid Red Geometries</h2>
+            <br>
+            
+            
+            <h2>Collect <span style="color: blue">Blue Geometries</span> To Gain Energy</h2>
+            <div class="score" id="score">
+                <div class="score__content" id="level">
+                    <div class="score__label">level</div>
+                    <div class="score__value score__value--level" id="levelValue">1</div>
+                    <svg class="level-circle" id="levelCircle" viewBox="0 0 200 200">
+                        <circle id="levelCircleBgr" r="80" cx="100" cy="100" fill="none" stroke="#d1b790" stroke-width="24px" />
+						<circle id="levelCircleStroke" r="80" cx="100" cy="100" fill="none" #f25346 stroke="#68c3c0" stroke-width="14px" stroke-dasharray="502" />
+                    </svg>
+                </div>
+                <div class="score__content" id="dist">
+                    <div class="score__label">distance</div>
+                    <div class="score__value score__value--dist" id="distValue">000</div>
+                </div>
+                <div class="score__content" id="energy">
+                    <div class="score__label">energy</div>
+                    <div class="score__value score__value--energy" id="energyValue">
+                        <div class="energy-bar" id="energyBar"></div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="world" id="world">    </div>
+        <div class="message message--replay" id="replayMessage">Click to replay</div>
+        <div class="message message--replay" id="instructions">Grab the coins <span>avoid the red</span></div>
+
+    </div>
+
+    <div class="partisan">
+        <svg class="partisan__bg" viewBox="0 0 500 188" preserveAspectRatio="none" width="100%" height="100%" aria-hidden="true">
+            <polygon points="0 154 123.39 0 235.78 14.79 365.6 28.9 436.24 114.93 500 188 0 188 0 154" fill="#bed730"/>
+            <polygon points="0 188 108.84 18.17 347.91 26.79 500 188 365.6 28.9 123.39 0 0 154 0 188" fill="#dde465"/>
+        </svg>
+
+    </div>
+
+    
+
+      
+     
+
+
+
+
+    
+</body>
+</html>
